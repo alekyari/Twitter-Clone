@@ -1,32 +1,25 @@
 import "./index.css";
-
+import { BiHomeCircle, BiSearch, BiBell, BiBookmark} from 'react-icons/bi';
+import {HiOutlineMail} from 'react-icons/hi'
+import {CgProfile} from 'react-icons/cg'
+import {CiCircleMore} from 'react-icons/ci' 
+import {FaTwitter} from 'react-icons/fa'
+import {GiFeather} from 'react-icons/gi'
 const SideMenu = () => {
   return (<div className="menu">
         <div className="mobileMenu">
       <ul>
         <li>
-          <img
-            src="https://img.icons8.com/pulsar-line/256/home-page.png"
-            alt="home"
-          />
+       < BiHomeCircle />
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/material-rounded/256/hashtag-large.png"
-            alt="explore"
-          />
+          < BiSearch />
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/material/256/jingle-bell.png"
-            alt="notifications"
-          />
+       < BiBell />
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/ios-glyphs/256/filled-chat.png"
-            alt="messages"
-          />
+         <HiOutlineMail />
         </li>
       </ul>
       <div className="new_tweet"><img src="https://img.icons8.com/laces/256/lightweight.png" alt="new tweet" /></div>
@@ -34,49 +27,63 @@ const SideMenu = () => {
     <div className="deskMenu">
       <ul>
       <li>
-        <img
-          src="https://img.icons8.com/color/256/twitter--v1.png"
-          alt="twitter logo"
-        />
+      < FaTwitter />
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/pulsar-line/256/home-page.png"
-          alt="home"
-        />
+      < BiHomeCircle />
         <p>Home</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material-rounded/256/hashtag-large.png"
-          alt="explore"
-        />
+      < BiSearch />
         <p>Explore</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material/256/jingle-bell.png"
-          alt="notifications"
-        />
+      < BiBell />
         <p>Notifications</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/ios-glyphs/256/filled-chat.png"
-          alt="messages"
-        />
+      <HiOutlineMail />
         <p>Messages</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material/256/bookmark-outline.png"
-          alt="bookmarks"
-        />
+      <BiBookmark />
         <p>Bookmarks</p>
       </li>
+      <li>
+      <CgProfile />
+        <p>Profile</p>
+        </li>
+        <li>
+      <CiCircleMore />
+        <p>More</p>
+        </li>
+
+        <li>
+      <div className="tablet_tweet"><span>+</span><GiFeather className="feather"/></div>
+        </li>
+
+        <li>
+      <div className="tweet"><h4>Tweet</h4></div>
+        </li>
+        
     </ul>
+    <div className="user_log">
+      
+    <img
+          className="profile_img"
+          src="https://img.icons8.com/arcade/256/guest-male.png"
+          alt="profile"
+        />
+
+<div className="text_container">
+<div><p>username</p><p style={{color: "grey"}}>@username</p></div>
+      <span>...</span>
+      </div>
+      
+    </div>
     </div>
   </div>
+
 
   );
 };

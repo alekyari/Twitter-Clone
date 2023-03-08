@@ -14,22 +14,20 @@ const HamburgerMenu = ({ showMenu }) => {
         />
     <h3>username</h3>
     <p>@username</p>
-    <p>X Following Y Followers</p>
+    <div className="follower_count">
+      <div className="follower_count_left"> <h3>X</h3><p>Following</p></div>
+    <div className="follower_count_right"><h3>Y</h3> <p>Followers</p></div>
+
+    </div>
   </div>
   <div className="hamRight">
-    <p>x</p>
-    <p>+</p>
+    <h1>x</h1>
+    <div className="plus_button"><h1>+</h1></div>
   </div>
 
   </div>
- {/* <div className="main">
+ <div className="main">
       <ul>
-      <li>
-        <img
-          src="https://img.icons8.com/color/256/twitter--v1.png"
-          alt="twitter logo"
-        />
-      </li>
       <li>
         <img
           src="https://img.icons8.com/pulsar-line/256/home-page.png"
@@ -68,11 +66,11 @@ const HamburgerMenu = ({ showMenu }) => {
     </ul>
  </div>
  <div className="creator_studio">
-  <h2>Creator Studio</h2> <h2>v</h2>
+  <h3>Creator Studio</h3> <h3>v</h3>
  </div>
  <div className="professional_tools"> 
- <h2>Professional Tools</h2> <h2>v</h2>
- </div> */}
+ <h3>Professional Tools</h3> <h3>v</h3>
+ </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@
 .Header {
   display: flex;
   flex-direction: column;
-
+  background-color: rgba(255, 255, 255, 0.845);
   width: 100%;
   
 }
@@ -117,27 +117,40 @@ margin: 0;
   }
 
   @media screen and (min-width: 800px) {
-    .top_container_mobile {
-      display: none;
-    }
-    }
+  .top_container_mobile {
+     display: none;
+   }
+   }
 
-    @media screen and (min-width: 800px) {
-      .Header {
-        width: 45vw;
+   @media screen and (min-width: 800px) {
+    .Header {
+    width: 45vw;
+    position:fixed;
+    top:0;
+    left:18.4vw;
       }
       }
 
 
 
-       @media screen and (min-width: 800px) {
-        .bottom_container {
-          width: 100%;
-        }
-        }
+  @media screen and (min-width: 800px) {
+ .bottom_container {
+   width: 100%;
+   }
+  }
 
-        @media screen and (min-width: 800px) {
-          .more_tweet {
-            width: 100%;
-          }
-          } 
+ @media screen and (min-width: 800px) {
+ .more_tweet {
+  width: 100%;
+  }
+ } 
+
+ @media screen and (min-width: 800px) {
+  .more_tweet {
+   width: 100%;
+   display: none;;
+   }
+   } 
+
+
+            

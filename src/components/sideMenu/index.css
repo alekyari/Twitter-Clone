@@ -28,6 +28,7 @@
   align-items: center;
   gap: 14px;
   cursor: pointer;
+  font-size: 28px;
 }
 
 
@@ -70,14 +71,18 @@ cursor:pointer;
 
 
 .deskMenu {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items:flex-start;
+  justify-content: space-between;
   border-right: 1px solid lightgrey;
   font-weight: bold;
   font-size: 0.9rem;
   display: none;
   height:100%;
+  padding:0 0 20px 0;
+  margin:0;
 }
 
 .deskMenu button {
@@ -94,7 +99,7 @@ cursor:pointer;
 
 
 .deskMenu ul {
-  padding: 0 30px;
+  padding: 0 0 0 20px;
   list-style-type: none;
 }
 
@@ -103,17 +108,106 @@ cursor:pointer;
   align-items: center;
   gap: 14px;
   cursor: pointer;
+  font-size: 30px;
+  padding: 15px;;
+}
+
+
+.deskMenu ul li p{
+  font-size: 1.2rem;
+  margin:0;
+  padding:0;
+  display:none;
+
 }
 
 .deskMenu ul li:hover {
   color: #01b5f1;
 }
 
-.deskMenu ul li img {
-  width: 25px;
-  height: 25px;
+.tablet_tweet{
+display: flex;
+justify-content: center;
+align-items: center;
+position:relative;
+width: 50px;
+height:50px;
+color:white;
+background-color: #01b5f1;
+border-radius: 100%;
+
 }
 
+.tablet_tweet span{
+ position:absolute;
+ top:8px;
+ left:13px;
+ margin:0;
+ padding:0;
+ font-size: 0.9rem!important;
+  }
+
+
+.feather{
+ padding-top:4px;
+ margin:0;
+ font-size: 28px;
+
+}
+
+.tweet{
+  display: none;
+  justify-content: center;
+  align-items: center;
+height:50px;
+width: 180px;
+background-color: #01b5f1;
+color: white;
+border-radius: 30px;
+font-weight:1.5rem;
+}
+
+
+.tweet h4{
+  font-size: 1.1rem;
+  }
+  
+
+
+.user_log{
+  display: flex;
+  flex-direction: row;
+  height:60px;
+  width: 190px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  }
+
+
+.text_container{
+  display: none;
+}
+
+.text_container p{
+  margin:0;
+  padding:0 10px 0 10px;
+ 
+}
+
+.user_log span{
+width: 40px;
+height: 35px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.user_log:hover{
+  background-color: lightgrey;
+  border-radius: 30px;
+}
 
 /* deskMenu */
 
@@ -135,5 +229,22 @@ cursor:pointer;
 @media screen and (min-width: 800px) {
   .menu {
     width: 20vw;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .tweet,
+  .deskMenu ul li p,
+  .text_container {
+    display: flex;
+    
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .tablet_tweet 
+  {
+    display: none;
   }
 }
