@@ -7,7 +7,6 @@
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.845);
   width: 100%;
-  
 }
 
 .top_container_mobile {
@@ -67,11 +66,14 @@ justify-content: center;
 
 
 .bottom_container{
+  position: sticky;
+  top:0px;
   display: flex;
   align-items: center ;
   justify-content: center;
   width: 100vw;
   border-bottom: 1px solid lightgrey;
+  
  
 }
 
@@ -92,6 +94,89 @@ margin: 0;
   border-bottom: 5px solid #01b5f1;
   font-weight: bold;
 }
+
+.whatsappen{
+  display:none;
+  flex-direction:column;
+  padding:20px 0 0 0;
+  margin:0;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  }
+  
+  .whatsappen .text{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    padding-left:20px
+  }
+
+
+  .text input{
+  height:30px;
+  font-size: 1.1rem;
+  border: none;
+  }
+  
+  .text .btn_filter{
+    background-color: #01b5f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding:0 10px;
+    margin:0;
+    
+   
+  }
+  
+  .icons{
+  display:flex;
+  justify-content: space-between;
+  }
+  
+  .icons:hover{
+    cursor:pointer;
+  }
+  
+  .icons button{
+    background-color: #01b5f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin:13px 15px 0 0;
+    }
+    
+  
+  
+  .icons ul{
+    display:flex;
+    list-style-type: none;
+    margin-left: 30px;
+    gap:8px;
+    font-size:20px ;
+    }
+  
+  
+    .icons ul li{
+      color: #01b5f1;
+      }
+
+
+
+
+
 
 .more_tweet{
   display: flex;
@@ -132,6 +217,12 @@ margin: 0;
       }
 
 
+      @media screen and (min-width: 800px) {
+        .whatsappen {
+          display:flex;
+        }
+        }
+
 
   @media screen and (min-width: 800px) {
  .bottom_container {
@@ -153,4 +244,12 @@ margin: 0;
    } 
 
 
-            
+  
+
+
+
+ @media screen and (min-width: 800px) {
+  .bottom_container {
+  position:initial
+   }
+   } 

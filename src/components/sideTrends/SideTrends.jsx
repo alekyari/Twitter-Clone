@@ -1,15 +1,41 @@
 import TrendList from "../trendList";
+import { useState } from "react";
+import { useRef } from "react";
 import {BiSearch} from 'react-icons/bi';
 import { FiMenu } from "react-icons/fi";
 import "./index.css";
 
 const SideTrends = () => {
+  const sideTrendsRef = useRef(null);
+  const [inputValue, setInputValue] = useState("");
+  let search = ""
+
+  const triggerBtnFilter = () =>{
+   console.log(inputValue)
+  //  let search = inputValue 
+  }
+  
+
+// Esercizio 09-03-2023 - useRef
+// Ho usato l'Hook useRef per accedere alle proprietà del componente SideTrends, 
+//nello specifico attraverso la funzione onScroll impongo che per quantità di scroll >= di 1
+// la viewort di sposta di 60 px verso il basso, per scroll <=1 la viewport ritorna alla posizione iniziale.
   return (
-    <div className="SideTrends">
-      <input type="text" className="search_twitter"  placeholder="Search Twitter"/>
+    <div ref={sideTrendsRef} className="SideTrends"  
+     onScroll={() =>
+      sideTrendsRef.current.scrollTop >= 1
+        ? (sideTrendsRef.current.style.transform = "translateY(-60px)")
+        : (sideTrendsRef.current.style.transform = "translateY(0)")
+    }
+    >
+      <input type="text" value={inputValue}
+        onChange={(e) => {setInputValue(e.target.value);console.log(inputValue)}} className="search_twitter"  placeholder="Search Twitter"/>
+    <button 
+    onClick={triggerBtnFilter} 
+    >Search</button>
       <div className="list">
         <h2>Trends for you</h2>
-      <TrendList />
+      <TrendList search={search}/>
       </div>
       <div className="follow_suggestions">
         <h2>Who to follow</h2>

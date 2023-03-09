@@ -1,0 +1,29 @@
+.tablet_tweet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    width: 50px;
+    height:50px;
+    color:white;
+    background-color: #01b5f1;
+    border-radius: 100%;
+    
+    }
+    
+    .tablet_tweet span{
+     position:absolute;
+     top:8px;
+     left:13px;
+     margin:0;
+     padding:0;
+     font-size: 0.9rem!important;
+      }
+
+
+      .feather{
+        padding-top:4px;
+        margin:0;
+        font-size: 28px;
+       
+       }

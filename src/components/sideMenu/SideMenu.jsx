@@ -4,7 +4,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 import {CgProfile} from 'react-icons/cg'
 import {CiCircleMore} from 'react-icons/ci' 
 import {FaTwitter} from 'react-icons/fa'
-import {GiFeather} from 'react-icons/gi'
+import NewTweet from '../newTweet'
 const SideMenu = () => {
   return (<div className="menu">
         <div className="mobileMenu">
@@ -22,7 +22,7 @@ const SideMenu = () => {
          <HiOutlineMail />
         </li>
       </ul>
-      <div className="new_tweet"><img src="https://img.icons8.com/laces/256/lightweight.png" alt="new tweet" /></div>
+      <div className="new_tweet"><NewTweet /></div>
     </div>
     <div className="deskMenu">
       <ul>
@@ -58,8 +58,8 @@ const SideMenu = () => {
         <p>More</p>
         </li>
 
-        <li>
-      <div className="tablet_tweet"><span>+</span><GiFeather className="feather"/></div>
+        <li id="tweet">
+      <NewTweet />
         </li>
 
         <li>

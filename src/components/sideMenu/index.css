@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 60px;
+  height: 45px;
   background-color: white;
   border-top: 1px solid lightgray;
 }
@@ -50,14 +50,7 @@
   background-color: transparent;
 }
 
-.new_tweet img{
-  background-color: #01b5f1;
-  padding:8px;
-  width:40px;
-  height:40px;
-  border-radius:100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 
 .new_tweet:hover {
 cursor:pointer;
@@ -125,35 +118,10 @@ cursor:pointer;
   color: #01b5f1;
 }
 
-.tablet_tweet{
-display: flex;
-justify-content: center;
-align-items: center;
-position:relative;
-width: 50px;
-height:50px;
-color:white;
-background-color: #01b5f1;
-border-radius: 100%;
-
-}
-
-.tablet_tweet span{
- position:absolute;
- top:8px;
- left:13px;
- margin:0;
- padding:0;
- font-size: 0.9rem!important;
-  }
 
 
-.feather{
- padding-top:4px;
- margin:0;
- font-size: 28px;
 
-}
+
 
 .tweet{
   display: none;
@@ -243,7 +211,7 @@ align-items: center;
 }
 
 @media screen and (min-width: 1280px) {
-  .tablet_tweet 
+ #tweet
   {
     display: none;
   }
