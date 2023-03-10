@@ -8,13 +8,16 @@ import { BiMap } from 'react-icons/bi'
 
 
 
-const Header = ({ setHeaderInputValue }) => {
+const Header = ({ setHeaderInputValue, setModalVisibility }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [inputValue, setInputValue] = useState("");
   
+  const onHandleClick = () => {
+    setModalVisibility(true);
+  };
 
-
-const triggerBtnFilter = () =>{
+const triggerBtnFilter = (e) =>{
+  e.preventDefault();
   setHeaderInputValue(inputValue)
 }
 
@@ -61,12 +64,14 @@ const triggerBtnFilter = () =>{
           className="profile_img" 
           src="https://img.icons8.com/arcade/256/guest-male.png"
           alt="profile"
-        /> <input type="text" placeholder="What's happening?" value={inputValue}
+        /> 
+        <form  onClick={triggerBtnFilter}>
+        <input type="text" placeholder="What's happening?" value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
    
         required />
-
-        <button onClick={triggerBtnFilter} className="btn_filter">Filter</button>
+        <input type="submit" value="Filter" className="btn_filter"/>
+        </form>
         </div>
         <div className="icons">
           <ul>
@@ -77,7 +82,7 @@ const triggerBtnFilter = () =>{
           <li>< MdSchedule /></li>
           <li>< BiMap /></li>
           </ul>
-          <button>Tweet</button>
+          <button onClick={onHandleClick} >Tweet</button>
         </div>
       </div>
       <div className="more_tweet">

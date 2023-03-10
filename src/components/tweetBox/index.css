@@ -1,0 +1,103 @@
+.whatsappen{
+  position:relative;
+  display:flex;
+  justify-content: flex-end;
+  flex-direction:column;
+  padding:20px 0 0 0;
+  margin:0;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height:150px
+  }
+  
+  .whatsappen .text{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .whatsappen .text form{
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5px;
+
+  }
+
+
+
+  .text input{
+  height:30px;
+  font-size: 1.1rem;
+  border: none;
+  }
+  
+  .text .btn_filter{
+    background-color: #01b5f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding:0 10px;
+    margin:0;
+    
+   
+  }
+  
+  .icons{
+  display:flex;
+  justify-content: space-between;
+  }
+  
+  .icons:hover{
+    cursor:pointer;
+  }
+  
+  .icons button{
+    background-color: #01b5f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin:13px 15px 0 0;
+    }
+    
+  
+  
+  .icons ul{
+    display:flex;
+    list-style-type: none;
+    margin-left: 30px;
+    gap:8px;
+    font-size:20px ;
+    }
+  
+  
+    .icons ul li{
+      color: #01b5f1;
+      }
+
+#close_modal{
+  position: absolute;
+  margin-bottom:10px;
+  top: 10%;
+  left: 4%;
+  border: 0;
+  font-size: 1.2rem;;
+  background-color: transparent;
+  cursor: pointer;
+}

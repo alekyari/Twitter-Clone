@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import MessageItem from "../messageItem";
 import "./index.css";
 
-const MessageList = ({ headerInputValue }) => {
+const MessageList = ({ headerInputValue , setModalFixVisibility}) => {
 const [post, setpost]=useState([]);
 
 useEffect(()=> {
@@ -22,7 +22,7 @@ post.filter((msg) => msg.body.includes(headerInputValue));
     <div className="MessageList">
       <div className="white_space"></div>
       {filteredMessageList().map((message) => (
-        <MessageItem messageData={message} key={message.id} />
+        <MessageItem messageData={message} key={message.id} setModalFixVisibility={setModalFixVisibility} />
       ))}
    
     </div>

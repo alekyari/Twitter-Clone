@@ -5,7 +5,11 @@ import {CgProfile} from 'react-icons/cg'
 import {CiCircleMore} from 'react-icons/ci' 
 import {FaTwitter} from 'react-icons/fa'
 import NewTweet from '../newTweet'
-const SideMenu = () => {
+const SideMenu = ({ setModalVisibility }) => {
+  const onHandleClick = () => {
+    setModalVisibility(true);
+  };
+
   return (<div className="menu">
         <div className="mobileMenu">
       <ul>
@@ -22,7 +26,7 @@ const SideMenu = () => {
          <HiOutlineMail />
         </li>
       </ul>
-      <div className="new_tweet"><NewTweet /></div>
+      <div className="new_tweet" onClick={onHandleClick}><NewTweet /></div>
     </div>
     <div className="deskMenu">
       <ul>
@@ -58,12 +62,12 @@ const SideMenu = () => {
         <p>More</p>
         </li>
 
-        <li id="tweet">
-      <NewTweet />
+        <li id="tweet" onClick={onHandleClick}>
+      <NewTweet /> 
         </li>
 
         <li>
-      <div className="tweet"><h4>Tweet</h4></div>
+      <div className="tweet" onClick={onHandleClick}><h4>Tweet</h4></div>
         </li>
         
     </ul>

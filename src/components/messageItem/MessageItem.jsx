@@ -2,13 +2,16 @@ import { useEffect,useState } from "react";
 import "./index.css";
 
 
-const MessageItem = ({ messageData }) => {
+const MessageItem = ({ messageData,  setModalFixVisibility}) => {
   const {body, userId } = messageData;
 
   const [userData, setUserData]=useState({})
 
   useEffect(()=>{fetch(`https://dummyjson.com/users/${userId}`).then(res=>res.json()).then(data=>setUserData(data))},[])
-
+  
+  const onHandleClick = () => {
+    setModalFixVisibility(true);
+  };
 
   return (
     <div className="MessageItem">
@@ -22,7 +25,7 @@ const MessageItem = ({ messageData }) => {
             src="https://img.icons8.com/external-those-icons-lineal-those-icons/256/external-Chat-Bubble-messages-and-chat-those-icons-lineal-those-icons-10.png"
             alt="chat"
           />
-          <img
+          <img onClick={onHandleClick}
             src="https://img.icons8.com/material-sharp/256/sorting-arrows-horizontal.png"
             alt="arrow"
           />
